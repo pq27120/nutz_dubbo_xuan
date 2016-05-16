@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.sunivo.nutzdubbo.utils;
 
@@ -11,7 +11,7 @@ import org.nutz.ioc.loader.json.JsonLoader;
 
 /**
  * @author chengjianfang@sunivo.com
- * 
+ *         <p>
  *         2013年12月10日 下午3:04:02
  */
 public interface ProviderIocUtils extends IocUtils {
@@ -20,12 +20,15 @@ public interface ProviderIocUtils extends IocUtils {
      */
     Ioc2 JDBC_IOC = new NutIoc(new JsonLoader("inner/jdbc.js"));
 
+    Ioc2 JPUSH_IOC = new NutIoc(new ComboIocLoader(new AnnotationIocLoader(
+            "com.xuan.service.jpush.impl"), new JsonLoader("jpush/jpush.js")));
+
     /**
      * 服务提供者IOC
      */
     Ioc2 PROVIDER_ICO = new NutIoc(new ComboIocLoader(new AnnotationIocLoader(
             "com.sunivo.nutzdubbo.services",
-            "com.sunivo.messagecenter.services","com.xuan.smzdm.services"), new JsonLoader(
-            "common/common.js", "provider/provider.js", "service")));
+            "com.sunivo.messagecenter.services", "com.xuan.smzdm.services"), new JsonLoader(
+            "common/common.js", "provider/provider.js", "service","jpush/jpush.js")));
 
 }

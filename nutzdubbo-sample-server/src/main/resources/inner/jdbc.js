@@ -3,7 +3,7 @@ var jdbc = {
 	config : {
 		type : "org.nutz.ioc.impl.PropertiesProxy",
 		fields : {
-			paths : [ "jdbc.properties" ]
+			paths : [ "custom/" ]
 		}
 	},
 	// 数据源
