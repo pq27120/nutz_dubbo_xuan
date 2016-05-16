@@ -1,4 +1,4 @@
-package com.sunivo.nutzdubbo.services.impl;
+package com.xuan.smzdm.services.impl;
 
 import com.xuan.smzdm.services.IBaoBookService;
 import org.apache.http.HttpEntity;
@@ -10,6 +10,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.nutz.ioc.loader.annotation.IocBean;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import java.util.List;
 /**
  * Created by bj on 2016/5/16.
  */
+@IocBean(name = "baoBookService")
 public class BaoBookServiceImpl implements IBaoBookService{
     @Override
     public boolean baoBookSign() {
