@@ -60,7 +60,7 @@ var service = {
                 refer : 'baoBookService'
             },
             version : '1.0.0',
-            timeout : 6000
+            timeout : 15000
         }
     }
 }
