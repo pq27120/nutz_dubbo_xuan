@@ -59,7 +59,8 @@ var service = {
                 ref : {
                 refer : 'baoBookService'
             },
-            version : '1.0.0'
+            version : '1.0.0',
+            timeout : 6000
         }
     }
 }
