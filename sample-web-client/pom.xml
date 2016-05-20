@@ -111,6 +111,17 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <hostName>localhost</hostName>    <!--   Default: localhost -->
+                    <port>8086</port>    <!-- 启动端口 Default:8080 -->
+                    <path>/api</path>    <!-- 访问应用路径  Default: /${project.artifactId}-->
+                    <uriEncoding>UTF-8</uriEncoding>      <!-- uri编码 Default: ISO-8859-1 -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
